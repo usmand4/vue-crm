@@ -2,6 +2,7 @@
     <v-sheet class="bg-deep-purple pa-12" rounded>
         <v-card class="mx-auto px-6 py-8" max-width="344">
             <v-form>
+
                 <v-text-field class="mb-2" clearable label="Username" v-model="username"
                     placeholder="Enter your Username" />
                 <v-text-field class="mb-2" clearable label="Email" v-model="email" placeholder="Enter your Email" />
@@ -37,17 +38,17 @@
                 </v-if>
 
                 <v-btn color="success" size="large" type="button" variant="elevated" @click="signup">
-                    Sign Up
+                    SignUp
                 </v-btn>
             </v-form>
             <router-link to="/">SignIn</router-link>
         </v-card>
     </v-sheet>
 </template>
-  
+
 <script>
 export default {
-    name: "SignUp",
+    name: 'SignUp',
     data() {
         return {
             username: "",
@@ -68,28 +69,13 @@ export default {
         };
     },
     methods: {
-        signup() {
-            const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
-
-            const existingUser = storedUsers.find((u) => u.email === this.email);
-
-            if (existingUser) {
-                alert("User with this email already exists!");
-                return;
-            }
-
-            if (!this.username || !this.email || !this.password) {
-                alert("Please fill in all required fields");
-                return;
-            }
-
+        async signup() {
             let newUser = {
                 username: this.username,
                 email: this.email,
                 password: this.password,
                 userType: this.userType,
             };
-
             if (this.userType === "company") {
                 newUser = {
                     ...newUser,
@@ -115,15 +101,8 @@ export default {
                 };
             }
 
-            storedUsers.push(newUser);
-
-            localStorage.setItem("users", JSON.stringify(storedUsers));
-
-            alert("Sign Up successful!");
-        }
-
-
+            this.$store.dispatch('signUp', newUser);
+        },
     },
 };
 </script>
-  

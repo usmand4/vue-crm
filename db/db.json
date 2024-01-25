@@ -1,0 +1,15 @@
+{
+  "storedUsers": [
+    {
+      "id": "9078",
+      "username": "dasdaa",
+      "email": "sadasd",
+      "password": "sadsd",
+      "userType": "company",
+      "company_name": "asdsad",
+      "business_type": "dsdad",
+      "industry": "dsaaa",
+      "registration_number": "sdsd"
+    }
+  ]
+}
