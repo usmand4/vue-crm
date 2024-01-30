@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
-import SignIn from './components/pages/SignIn.vue';
-import SignUp from './components/pages/SignUp.vue';
+import SignIn from './pages/SignIn.vue';
+import SignUp from './pages/SignUp.vue';
+import CompanyDashboard from './pages/Company.vue';
+import FreelancerDashboard from './pages/Freelancer.vue';
 
 const routes = [
     {
@@ -10,6 +12,14 @@ const routes = [
     {
         path: '/signup',
         component: SignUp
+    },
+    {
+        path: '/company',
+        component: CompanyDashboard
+    },
+    {
+        path: '/freelancer',
+        component: FreelancerDashboard
     }
 ];
 const router = createRouter({

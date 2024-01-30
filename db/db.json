@@ -1,15 +1,25 @@
 {
   "storedUsers": [
     {
-      "id": "9078",
-      "username": "dasdaa",
-      "email": "sadasd",
-      "password": "sadsd",
-      "userType": "company",
-      "company_name": "asdsad",
-      "business_type": "dsdad",
-      "industry": "dsaaa",
-      "registration_number": "sdsd"
+      "id": "f363",
+      "username": "usman",
+      "email": "usmanalid4@gmail.com",
+      "password": "asdfgh",
+      "userType": "freelancer",
+      "freelancer_name": "xyz",
+      "industry": "abs"
+    }
+  ],
+  "login": [
+    {
+      "id": "c71e",
+      "email": "dasddad",
+      "password": "ddads"
+    },
+    {
+      "id": "c296",
+      "email": "sdasdd",
+      "password": "sddass"
     }
   ]
 }
